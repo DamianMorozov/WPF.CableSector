@@ -1,0 +1,67 @@
+﻿<Window x:Class="CableSector.Views.WindowMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Расчёт многожильного кабеля"
+        MaxWidth="1000" MinWidth="1000" Width="1000"
+        MaxHeight="800" MinHeight="800" Height="800"
+        FontSize="14"
+        WindowStartupLocation="CenterOwner" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" Background="White" 
+        ResizeMode="NoResize" Closing="Window_OnClosing" >
+
+    <Window.Resources>
+    </Window.Resources>
+
+    <Grid x:Name="GridMain" Background="{DynamicResource WindowBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="11.9*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox x:Name="GroupBoxButtons" 
+                  BorderBrush="Transparent" Background="Transparent" BorderThickness="0" >
+            <Grid x:Name="GridButtons">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="ButtonDefault" ToolTip="По-умолчанию" Margin="0 20 0 20" FontSize="18"
+                        Grid.Row="0" Height="75" TabIndex="501" BorderBrush="Transparent" Background="Transparent"
+                        Click="ButtonDefault_Click" >
+                    <Image Source="{StaticResource BitmapImageDefault}" />
+                </Button>
+                <Button x:Name="ButtonCanvas" ToolTip="Обновить область печати" Margin="0 0 0 20" FontSize="18"
+                        Grid.Row="1" Height="75" TabIndex="503" BorderBrush="Transparent" Background="Transparent"
+                        Click="ButtonCanvas_Click" >
+                    <Image Source="{StaticResource BitmapImageCanvas}" />
+                </Button>
+                <Button x:Name="ButtonPrint" ToolTip="Печать" Margin="0 0 0 20" FontSize="18"
+                        Grid.Row="2" Height="75" TabIndex="504" BorderBrush="Transparent" Background="Transparent"
+                        Click="ButtonPrint_Click" >
+                    <Image Source="{StaticResource BitmapImagePrint}" />
+                </Button>
+                <Button x:Name="ButtonChangeLog" ToolTip="История версий" Margin="0 0 0 20" FontSize="18"
+                        Grid.Row="3" Height="75" TabIndex="504" BorderBrush="Transparent" Background="Transparent"
+                        Click="ButtonChangeLog_OnClick" >
+                    <Image Source="{StaticResource BitmapImageChangeLog}" />
+                </Button>
+                <Button x:Name="ButtonAbout" ToolTip="О программе" Margin="0 0 0 20" FontSize="18"
+                        Grid.Row="4" Height="75" TabIndex="504" BorderBrush="Transparent" Background="Transparent"
+                        Click="ButtonAbout_OnClick" >
+                    <Image Source="{StaticResource BitmapImageAbout}" />
+                </Button>
+            </Grid>
+        </GroupBox>
+
+        <Frame x:Name="FrameMain" Grid.Column="1" NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>

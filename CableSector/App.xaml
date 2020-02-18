@@ -1,0 +1,29 @@
+﻿<Application x:Class="CableSector.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:CableSector.ViewModels"
+             StartupUri="Views/WindowMain.xaml">
+    
+    <Application.Resources>
+        <viewmodels:ProgramSettings x:Key="ViewModelProgramSettings" RowsCountCable="4" Header="см. в коде"/>
+        <viewmodels:ArrayRecord x:Key="ViewModelArrayRecord" />
+        <!--Style-->
+        <Style x:Key="CenterAligned" TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <!--Color-->
+        <LinearGradientBrush x:Key="WindowBackgroundBrush" StartPoint="0,0" EndPoint="2,2">
+            <GradientStop Offset="1.00" Color="Silver"/>
+            <GradientStop Offset="0.00" Color="WhiteSmoke"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="FontColorDataGrid" Color="Blue"/>
+        <SolidColorBrush x:Key="FontColorLabel" Color="Blue"/>
+        <!--Image-->
+        <BitmapImage x:Key="BitmapImageDefault" UriSource="Images/default_8192.png"/>
+        <BitmapImage x:Key="BitmapImageEditor" UriSource="Images/editor_8192.png"/>
+        <BitmapImage x:Key="BitmapImageCanvas" UriSource="Images/refresh_1306.png"/>
+        <BitmapImage x:Key="BitmapImagePrint" UriSource="Images/print_printer_2656.png"/>
+        <BitmapImage x:Key="BitmapImageAbout" UriSource="Images/information_9230.png"/>
+        <BitmapImage x:Key="BitmapImageChangeLog" UriSource="Images/changelog_9156.png"/>
+    </Application.Resources>
+</Application>
